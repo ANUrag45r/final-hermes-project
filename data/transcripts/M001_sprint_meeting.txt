@@ -1,0 +1,8 @@
+Alice:
+API development should finish this week.
+
+Bob:
+Authentication module is pending.
+
+Charlie:
+I'll complete testing.

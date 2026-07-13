@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.db
+.env
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Vector storage
+vector_db/qdrant_storage/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

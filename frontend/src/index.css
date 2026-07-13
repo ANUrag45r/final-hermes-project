@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --paper: #f7f8fa;
+  --surface: #ffffff;
+  --ink: #0f1e2e;
+  --ink-800: #16293c;
+  --ink-700: #1f3850;
+  --ink-600: #2c4a66;
+  --line: #e3e7ec;
+  --recall-soft: #fbefd8;
+}
+
+.dark {
+  color-scheme: dark;
+  --paper: #0b141d;
+  --surface: #121e29;
+  --ink: #e6ebf0;
+  --ink-800: #d2dae2;
+  --ink-700: #b7c2cc;
+  --ink-600: #93a2af;
+  --line: #21303e;
+  --recall-soft: #2a2418;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: theme("colors.paper");
+  color: theme("colors.ink.DEFAULT");
+  font-family: theme("fontFamily.sans");
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Knowledge-graph triple chip — the signature element. */
+.triple {
+  font-family: theme("fontFamily.mono");
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.triple .rel {
+  color: theme("colors.synapse");
+}
+.triple .rel::before {
+  content: "—";
+  margin-right: 0.2rem;
+}
+.triple .rel::after {
+  content: "→";
+  margin-left: 0.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
